@@ -1,0 +1,9 @@
+@mixin size ($w, $h){
+    width: $w;
+    height: $h;
+}
+
+@mixin gradient ($col1, $col2){
+    background: linear-gradient(to top, $col1, $col2);
+}
+    

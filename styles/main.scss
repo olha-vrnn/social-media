@@ -1,0 +1,106 @@
+@import './base/base';
+@import './base/mixins';
+@import './base/variables';
+
+body{
+    background-color: $page-color;
+}
+
+.text{
+    font-family: 'Lato', sans-serif;
+    color: #373737;
+}
+
+.container{
+    margin: 100px auto;
+    width: 100%;
+    background-color: $box-color;
+    display: flex;
+}
+
+.social-media{
+    @include size (100px, 300px);
+    border-right: $box-color 1px solid;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.8s;
+
+    &:hover{
+        width: 500px;
+
+        .twitter{
+            background-color: #00acee;
+        }
+
+        .facebook{
+            background-color: #4267B2;
+        }
+
+        .linkedin{
+            @include gradient (#008cbd, #00a7cf);
+        }
+
+        .instagram{
+            @include gradient (#009a2f, #5fc51c);
+        }
+
+        .youtube{
+            @include gradient (#d70000, #eb0000 )
+        }
+
+        .tumblr{
+            background-color:#263c57;
+        }
+
+        .dribbble{
+            @include gradient (#f66098, #ee1e6e);
+        }
+
+    }
+
+    &__logo{
+        @include size (100px, 300px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        background-color: $socmed-color;
+
+        &:hover{
+
+            img{
+                transform: scale(1.5);
+            }
+        }
+
+        img{
+            width: 40px;
+            transition: all 0.3s; 
+        }
+    }
+
+    &__text{
+        @include size (400px, 100%);
+        position: absolute;
+        top: 0;
+        left: 100px;
+        background-color: $white-color;
+        padding: 90px 20px 0 15px;
+
+        h1{
+            @extend .text;
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        p{
+            @extend .text;
+            font-size: 14px;
+            line-height: 24px;
+        }    
+    }
+}
+
+
+
+
